@@ -18,14 +18,14 @@ public class StepManager
 	private Memory memory ;
 	private Registers registers ;
 	
-	private Vector history ;
-	private Vector curStepHistory ;
+	private Vector<Vector<UndoableEvent>> history ;
+	private Vector<UndoableEvent> curStepHistory ;
 	
 	private StepManager( Memory m, Registers r )
 	{
 		memory = m ;
 		registers = r ;
-		history = new Vector() ;
+		history = new Vector<Vector<UndoableEvent>>() ;
 	}
 	
 	protected StepManager( Machine m )
@@ -46,7 +46,7 @@ public class StepManager
 
 	protected void beginForwardStep()
 	{
-		curStepHistory = new Vector() ;
+		curStepHistory = new Vector<UndoableEvent>() ;
 		memory.addMemoryCellListener( this ) ;
 		registers.addMemoryCellListener( this ) ;
 		machineState.addMachineStateListener( this ) ;
@@ -70,7 +70,7 @@ public class StepManager
 		int sz ;
 		if ( (sz=history.size()) > 0 )
 		{
-			Vector events = (Vector)history.elementAt( sz-1 ) ;
+			Vector<UndoableEvent> events = history.elementAt( sz-1 ) ;
 			for ( int i = events.size() - 1 ; i >= 0 ; i-- )
 			{
 				UndoableEvent e = (UndoableEvent)events.elementAt( i ) ;

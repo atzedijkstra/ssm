@@ -12,6 +12,8 @@ import java.util.* ;
 
 public class UndoableEvent extends EventObject
 {
+	private static final long serialVersionUID = 1L ;
+
     private Modification	undoModification	;
     
     protected UndoableEvent( Object src, Modification mdf )
