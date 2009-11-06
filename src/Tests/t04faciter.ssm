@@ -1,0 +1,1 @@
+;; Iterative version of faculty;	bra	mainFac:	link	1	; fac( int n )	LDC	1	; int res = 1 ;	stl	1FacTst:	ldl	-2	; while ( n > 1 )	LDC	1	gt	brf	FacEnd	ldl	-2	; res = res * n 	ldl	1	mul	stl	1	ldl	-2	; n = n - 1	LDC	1	sub	stl	-2	bra	FacTstFacEnd:	ldl	1	; return( res )	str	RR	unlink	sts	-1	retmain:	LDC	6	bsr	Fac	; fac( 6 )	trap	0	halt		

@@ -1,0 +1,2 @@
+#!/bin/sh
+java -classpath /praktikum/ipt/SSM/ssmui.jar nl.uu.cs.ssmui.Runner

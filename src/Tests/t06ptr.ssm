@@ -1,0 +1,1 @@
+	BRA	MainDoPtr:	LINK	2	LDC	0x33333333	; i = ...	STL	2	LDLA	2		; pi = & i	STL	1	LDL	1		; i = *pi	LDA	0	STL	2	LDC	0x44444444	LDL	1		; *pi = ...	STA	0	LDC	0x55555555	; invalid ref, *0x55555555	LDA	0	UNLINK	RETMain:	BSR	DoPtr

@@ -1,0 +1,3 @@
+#!/bin/sh
+java -jar ssmui.jar $*
+#java -cp ssmui.jar nl.uu.cs.ssmui.Runner $*

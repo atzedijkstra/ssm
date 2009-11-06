@@ -1,0 +1,1 @@
+	bra	mainFac:	link	0	// fac( int n )	ldl	-2	// if ( n <= 1 )	LDC	1	le	brt	FacTh	ldl	-2	// else return( n * fac( n-1 ) ) ;	ldl	-2	LDC	1	sub	bsr	Fac	ldr	RR	mul	bra	FacEndFacTh:	LDC	1	// then return( 1 )FacEnd:	str	RR	unlink	sts	-1	retmain:	LDC	6	annote	SP 0 0 green argument	bsr	Fac	// fac( 6 )	halt		

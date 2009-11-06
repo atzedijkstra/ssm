@@ -1,0 +1,1 @@
+lx:ly:l1:lz: ldc 3ldc 	4ldc	-4ldc 0x5ldc -0x6ldc l3annote SP -3 0 red "Pushed constants"addmulsubbra l2l3: bra l1l2: bra l3ldcl4: bsr l4
