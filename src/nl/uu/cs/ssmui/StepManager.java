@@ -8,8 +8,17 @@
 
 package nl.uu.cs.ssmui ;
 
-import nl.uu.cs.ssm.* ;
-import java.util.* ;
+import java.util.Vector;
+
+import nl.uu.cs.ssm.Machine;
+import nl.uu.cs.ssm.MachineState;
+import nl.uu.cs.ssm.MachineStateEvent;
+import nl.uu.cs.ssm.MachineStateListener;
+import nl.uu.cs.ssm.Memory;
+import nl.uu.cs.ssm.MemoryCellEvent;
+import nl.uu.cs.ssm.MemoryCellListener;
+import nl.uu.cs.ssm.Registers;
+import nl.uu.cs.ssm.UndoableEvent;
 
 public class StepManager
 	implements MemoryCellListener, MachineStateListener

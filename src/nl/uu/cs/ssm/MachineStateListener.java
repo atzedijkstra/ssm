@@ -8,7 +8,7 @@
 
 package nl.uu.cs.ssm ;
 
-import java.util.* ;
+import java.util.EventListener;
 
 public interface MachineStateListener extends EventListener
 {

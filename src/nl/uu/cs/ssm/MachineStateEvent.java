@@ -8,7 +8,6 @@
 
 package nl.uu.cs.ssm ;
 
-import java.util.* ;
 
 public class MachineStateEvent extends UndoableEvent
 {

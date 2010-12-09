@@ -8,7 +8,7 @@
 
 package nl.uu.cs.ssm ;
 
-import java.util.* ;
+import java.util.EventObject;
 
 public class UndoableEvent extends EventObject
 {
