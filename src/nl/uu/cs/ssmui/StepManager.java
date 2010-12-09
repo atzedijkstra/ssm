@@ -82,7 +82,7 @@ public class StepManager
 			Vector<UndoableEvent> events = history.elementAt( sz-1 ) ;
 			for ( int i = events.size() - 1 ; i >= 0 ; i-- )
 			{
-				UndoableEvent e = (UndoableEvent)events.elementAt( i ) ;
+				UndoableEvent e = events.elementAt( i ) ;
 				e.undoModification().modify() ;
 			}
 			history.removeElementAt( sz-1 ) ;
