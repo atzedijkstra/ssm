@@ -61,7 +61,7 @@ public class Machine
     {
     	if ( dir(fromA) < dir(toA) )
     	{
-	    	for ( int i = size-1 ; i >= 0 ; i-- )
+    		for ( int i = size-1 ; i >= 0 ; i-- )
 	    		memory.setAt( toA + dir(i), memory.getAt( fromA + dir(i) ) ) ;
     	}
     	else
@@ -299,7 +299,7 @@ public class Machine
 
         int code = fetchNextInstr() ;
         //System.out.println( "exec1 " + state ) ;
-        int tmp1, tmp2, tmp3 ;
+        int tmp1, tmp2, tmp3, addr, offset, size ;
         
         switch( state.instr.getCategory() )
         {
@@ -485,20 +485,21 @@ public class Machine
                         break ;
                         
                     case Instruction.I_LDH :
-                    	// This is exactly the same as LDA as long as STMH returns the begin address
-                    	tmp1 = pop();
-                    	int res = memory.getAt(tmp1 + state.inlineOpnds[0]);
-                    	push(res);
+                    	// This is exactly the same as LDA but left here for symmetry with the other heap instructions
+                    	addr = pop();
+                    	offset = state.inlineOpnds[0];
+                    	push(memory.getAt(addr + offset));
                     	break;
                     case Instruction.I_LDMH :
-                    	// This is exactly the same as LDMA as long as STMH returns the begin address
-                    	tmp1 = pop();
-                    	pushMultiple(tmp1 + state.inlineOpnds[0], state.inlineOpnds[1]);
+                    	addr = pop();
+                    	offset = state.inlineOpnds[0];
+                    	size = state.inlineOpnds[1];
+                    	pushMultiple(addr - offset - (size - 1), size);
                     	break;
                         
                     case Instruction.I_STH :      
                     	tmp1 = pop();
-                    	int addr = registers.getHP();
+                    	addr = registers.getHP();
                     	registers.adjustHP(1);
                     	memory.setAt(addr, tmp1); 
                     	memory.setAnnotationAt(addr, new MemoryAnnotation("begin / end", null));
@@ -506,14 +507,14 @@ public class Machine
                     	break;
                     	
                     case Instruction.I_STMH :
-                    	int size = state.inlineOpnds[0];
+                    	size = state.inlineOpnds[0];
                     	int beginAddr = registers.getHP();
                     	int endAddr = beginAddr + size - 1;
                     	registers.adjustHP(size);
                     	popMultiple(beginAddr, size);
                     	memory.setAnnotationAt(beginAddr, new MemoryAnnotation("begin", null));
                     	memory.setAnnotationAt(endAddr, new MemoryAnnotation("end", null));
-                    	push(beginAddr);
+                    	push(endAddr);
                     	break;
                         
                     default :
