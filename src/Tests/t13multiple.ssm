@@ -1,1 +1,8 @@
-	ldc	4	ldc	5	ldms	-1	2	ldms	-2	3	ldc	4	ldma	2	5	mul	stml	1	4
+	ldc	4
+	ldc	5
+	ldms	-1	2
+	ldms	-2	3
+	ldc	4
+	ldma	2	5
+	mul
+	stml	1	4

@@ -1,1 +1,581 @@
-Metrowerks RAD Data V 1BeginClasses    {9BE3D9E0-166E-11D1-B2D8-0060081C5489} "#base-object-class"    {24A693F8-14E5-11D2-B334-00600819ADE3} "Runner"    {5FA17216-8612-11D1-B2AD-006008A5C0A5} "Frame1"    {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JMenuBar"    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JMenu"    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JMenuItem"    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JToolBar"    {AF105FF8-70D9-11D1-B010-00805F6114CC} "javax.swing.JButton"    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JSplitPane"    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JScrollPane"    {AF105FF8-70D9-11D1-B010-00805F6114CC} "javax.swing.JTable"    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JTextPane"    {AF105FF8-70D9-11D1-B010-00805F6114CC} "javax.swing.JTextArea"    {AF105FF8-70D9-11D1-B010-00805F6114CC} "javax.swing.JSeparator"EndClassesBeginObject nl.uu.cs.ssmui.SSMRunner "SSMRunner"    BeginProperties        location = "0, 0"        font = SansSerif-PLAIN-12        JMenuBar = JMenuBar        layout = "BorderLayout 0, 0"        title = "Simple Stack Machine Interpreter"        size = "950, 720"    EndProperties    BeginInternalProperties        UseSwing 11 = 1        IsApplet 11 = 0    EndInternalProperties    BeginEventConnections        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = windowClosing            EventSetName = window            HandlerName = thisWindowClosing        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbNewInstrButton"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbNewInstrButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbStep1Button"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbStep1ButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbStartButton"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbStartButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbSaveButton"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbSaveButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbLoadButton"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbLoadButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbReloadButton"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbReloadButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbNewButton"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbNewButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbPauseButton"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbPauseButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbResetButton"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = actionPerformed            EventSetName = action            HandlerName = tbResetButtonActionPerformed        EndEventConnection        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\memNRestSplitPane\\codeNStackSplitPane\\codeScrollPane\\codeTable"            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"            EventName = mouseReleased            EventSetName = mouse            HandlerName = codeTableMouseReleased        EndEventConnection    EndEventConnections    BeginObject JMenuBar "javax.swing.JMenuBar"        LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"        BeginProperties            constraints = Center            location = "0, 0"            font = SansSerif-BOLD-10        EndProperties        BeginInternalProperties        EndInternalProperties        BeginObject jMenuFile "javax.swing.JMenu"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                rolloverEnabled = False                text = File            EndProperties            BeginInternalProperties                AppleMenu 11 = 0                Caption 8 = File                Checked 11 = 0                Default 11 = 0                enabled 11 = 1                Mutex 11 = 0            EndInternalProperties            BeginObject jMenuFileNew "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    rolloverEnabled = False                    text = New                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = New                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject            BeginObject jMenuFileLoad "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = "Load an Assembly File"                    rolloverEnabled = False                    text = "Load ..."                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = "Load ..."                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject            BeginObject jMenuFileReload "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = "Reload latest loaded File"                    rolloverEnabled = False                    text = Reload                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = Reload                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject            BeginObject jMenuFileQuit "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = Quit                    rolloverEnabled = False                    text = Quit                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = Quit                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject        EndObject        BeginObject jMenuRunner "javax.swing.JMenu"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                rolloverEnabled = False                text = Runner            EndProperties            BeginInternalProperties                AppleMenu 11 = 0                Caption 8 = Runner                Checked 11 = 0                Default 11 = 0                enabled 11 = 1                Mutex 11 = 0            EndInternalProperties            BeginObject jMenuRunnerStart "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = "Start Continuous Execution"                    rolloverEnabled = False                    text = Start                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = Start                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject            BeginObject jMenuRunnerPause "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = "Pause Runner"                    rolloverEnabled = False                    text = Pause                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = Pause                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject            BeginObject jMenuRunnerOneStep "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = "Make One Execution Step"                    rolloverEnabled = False                    text = "One Step"                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = "One Step"                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject            BeginObject jMenuRunnerReset "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = "Reset State of Machine"                    rolloverEnabled = False                    text = Reset                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = Reset                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject        EndObject        BeginObject jMenuHelp "javax.swing.JMenu"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                rolloverEnabled = False                text = Help            EndProperties            BeginInternalProperties                AppleMenu 11 = 0                Caption 8 = Help                Checked 11 = 0                Default 11 = 0                enabled 11 = 1                Mutex 11 = 0            EndInternalProperties            BeginObject jMenuHelpAbout "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = "About this Program"                    rolloverEnabled = False                    text = About                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = About                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject            BeginObject jMenuHelpSeparator1 "javax.swing.JSeparator"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = ""                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject            BeginObject jMenuHelpHelponTopic "javax.swing.JMenuItem"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    toolTipText = "Help on a Topic"                    rolloverEnabled = False                    text = "Help on Topic ..."                EndProperties                BeginInternalProperties                    AppleMenu 11 = 0                    Caption 8 = "Help on Topic ..."                    Checked 11 = 0                    Default 11 = 0                    enabled 11 = 1                    Mutex 11 = 0                EndInternalProperties            EndObject        EndObject    EndObject    BeginObject ssmToolBar "javax.swing.JToolBar"        LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"        BeginProperties            constraints = North            size = "350, 8"            location = "0, 0"            layout = "FlowLayout 0, 2, 2"            font = SansSerif-BOLD-10        EndProperties        BeginInternalProperties        EndInternalProperties        BeginObject tbNewButton "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                toolTipText = "New Code, erase current"                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "18, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject        BeginObject tbLoadButton "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                toolTipText = "Load Code from File"                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "27, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject        BeginObject tbReloadButton "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                toolTipText = "Reload Code from File"                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "36, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject        BeginObject tbSaveButton "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                toolTipText = "Save Code to File"                visible = False                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "45, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject        BeginObject tbStep1Button "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                toolTipText = "One Step"                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "54, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject        BeginObject tbStartButton "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                toolTipText = "Start Runner"                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "63, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject        BeginObject tbPauseButton "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                toolTipText = "Pause Runner"                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "72, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject        BeginObject tbResetButton "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "81, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject        BeginObject tbNewInstrButton "javax.swing.JButton"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                toolTipText = "New Instruction"                size = "7, 7"                rolloverEnabled = False                font = <inherit>                location = "90, 4"            EndProperties            BeginInternalProperties            EndInternalProperties        EndObject    EndObject    BeginObject memNRestSplitPane "javax.swing.JSplitPane"        LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"        BeginProperties            constraints = Center            dividerLocation = 465            size = "350, 235"            dividerSize = 8            location = "0, 15"            orientation = VERTICAL_SPLIT            foreground = black            font = Monospaced-PLAIN-12        EndProperties        BeginInternalProperties        EndInternalProperties        BeginObject codeNStackSplitPane "javax.swing.JSplitPane"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                dividerLocation = 500                size = "948, 464"                dividerSize = 6                location = "1, 1"                foreground = black            EndProperties            BeginInternalProperties            EndInternalProperties            BeginObject codeScrollPane "javax.swing.JScrollPane"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    size = "22, 26"                    location = "1, 1"                    font = <inherit>                EndProperties                BeginInternalProperties                EndInternalProperties                BeginObject codeTable "javax.swing.JTable"                    LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                    BeginProperties                        size = "343, 0"                        preferredScrollableViewportSize = "450, 600"                        font = <inherit>                        location = "0, 0"                    EndProperties                    BeginInternalProperties                    EndInternalProperties                EndObject            EndObject            BeginObject stackScrollPane "javax.swing.JScrollPane"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    size = "400, 544"                    location = "464, 1"                    font = <inherit>                EndProperties                BeginInternalProperties                EndInternalProperties                BeginObject stackTable "javax.swing.JTable"                    LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                    BeginProperties                        size = "-3, 0"                        preferredScrollableViewportSize = "450, 600"                        font = <inherit>                        location = "0, 0"                    EndProperties                    BeginInternalProperties                    EndInternalProperties                EndObject            EndObject        EndObject        BeginObject statusNOutputSplitPane "javax.swing.JSplitPane"            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"            BeginProperties                dividerLocation = 64                size = "838, 174"                dividerSize = 6                location = "1, 475"                orientation = VERTICAL_SPLIT                foreground = black            EndProperties            BeginInternalProperties            EndInternalProperties            BeginObject statusScrollPane "javax.swing.JScrollPane"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    size = "836, 403"                    location = "1, 1"                    font = <inherit>                EndProperties                BeginInternalProperties                EndInternalProperties                BeginObject statusTable "javax.swing.JTable"                    LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                    BeginProperties                        size = "833, 0"                        font = <inherit>                        location = "0, 0"                    EndProperties                    BeginInternalProperties                    EndInternalProperties                EndObject            EndObject            BeginObject outputScrollPane "javax.swing.JScrollPane"                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                BeginProperties                    size = "836, 76"                    location = "1, 37"                    font = <inherit>                EndProperties                BeginInternalProperties                EndInternalProperties                BeginObject outputTextArea "javax.swing.JTextArea"                    LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"                    BeginProperties                        editable = False                        size = "833, 73"                        font = SansSerif-PLAIN-10                        location = "0, 0"                    EndProperties                    BeginInternalProperties                    EndInternalProperties                EndObject            EndObject        EndObject    EndObjectEndObject
+Metrowerks RAD Data V 1
+BeginClasses
+    {9BE3D9E0-166E-11D1-B2D8-0060081C5489} "#base-object-class"
+    {24A693F8-14E5-11D2-B334-00600819ADE3} "Runner"
+    {5FA17216-8612-11D1-B2AD-006008A5C0A5} "Frame1"
+    {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JMenuBar"
+    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JMenu"
+    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JMenuItem"
+    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JToolBar"
+    {AF105FF8-70D9-11D1-B010-00805F6114CC} "javax.swing.JButton"
+    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JSplitPane"
+    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JScrollPane"
+    {AF105FF8-70D9-11D1-B010-00805F6114CC} "javax.swing.JTable"
+    {8AC75CA0-A339-11D1-B2BE-006008A5C0A5} "javax.swing.JTextPane"
+    {AF105FF8-70D9-11D1-B010-00805F6114CC} "javax.swing.JTextArea"
+    {AF105FF8-70D9-11D1-B010-00805F6114CC} "javax.swing.JSeparator"
+EndClasses
+BeginObject nl.uu.cs.ssmui.SSMRunner "SSMRunner"
+    BeginProperties
+        location = "0, 0"
+        font = SansSerif-PLAIN-12
+        JMenuBar = JMenuBar
+        layout = "BorderLayout 0, 0"
+        title = "Simple Stack Machine Interpreter"
+        size = "950, 720"
+    EndProperties
+    BeginInternalProperties
+        UseSwing 11 = 1
+        IsApplet 11 = 0
+    EndInternalProperties
+    BeginEventConnections
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = windowClosing
+            EventSetName = window
+            HandlerName = thisWindowClosing
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbNewInstrButton"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbNewInstrButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbStep1Button"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbStep1ButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbStartButton"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbStartButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbSaveButton"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbSaveButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbLoadButton"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbLoadButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbReloadButton"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbReloadButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbNewButton"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbNewButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbPauseButton"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbPauseButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\ssmToolBar\\tbResetButton"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = actionPerformed
+            EventSetName = action
+            HandlerName = tbResetButtonActionPerformed
+        EndEventConnection
+        BeginEventConnection {796E35A1-9372-11D2-9A19-00104B70C619}
+            SourcePath = "\\\\nl.uu.cs.ssmui.SSMRunner\\memNRestSplitPane\\codeNStackSplitPane\\codeScrollPane\\codeTable"
+            SinkPath = "\\\\nl.uu.cs.ssmui.SSMRunner"
+            EventName = mouseReleased
+            EventSetName = mouse
+            HandlerName = codeTableMouseReleased
+        EndEventConnection
+    EndEventConnections
+    BeginObject JMenuBar "javax.swing.JMenuBar"
+        LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+        BeginProperties
+            constraints = Center
+            location = "0, 0"
+            font = SansSerif-BOLD-10
+        EndProperties
+        BeginInternalProperties
+        EndInternalProperties
+        BeginObject jMenuFile "javax.swing.JMenu"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                rolloverEnabled = False
+                text = File
+            EndProperties
+            BeginInternalProperties
+                AppleMenu 11 = 0
+                Caption 8 = File
+                Checked 11 = 0
+                Default 11 = 0
+                enabled 11 = 1
+                Mutex 11 = 0
+            EndInternalProperties
+            BeginObject jMenuFileNew "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    rolloverEnabled = False
+                    text = New
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = New
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+            BeginObject jMenuFileLoad "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = "Load an Assembly File"
+                    rolloverEnabled = False
+                    text = "Load ..."
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = "Load ..."
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+            BeginObject jMenuFileReload "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = "Reload latest loaded File"
+                    rolloverEnabled = False
+                    text = Reload
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = Reload
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+            BeginObject jMenuFileQuit "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = Quit
+                    rolloverEnabled = False
+                    text = Quit
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = Quit
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+        EndObject
+        BeginObject jMenuRunner "javax.swing.JMenu"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                rolloverEnabled = False
+                text = Runner
+            EndProperties
+            BeginInternalProperties
+                AppleMenu 11 = 0
+                Caption 8 = Runner
+                Checked 11 = 0
+                Default 11 = 0
+                enabled 11 = 1
+                Mutex 11 = 0
+            EndInternalProperties
+            BeginObject jMenuRunnerStart "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = "Start Continuous Execution"
+                    rolloverEnabled = False
+                    text = Start
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = Start
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+            BeginObject jMenuRunnerPause "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = "Pause Runner"
+                    rolloverEnabled = False
+                    text = Pause
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = Pause
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+            BeginObject jMenuRunnerOneStep "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = "Make One Execution Step"
+                    rolloverEnabled = False
+                    text = "One Step"
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = "One Step"
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+            BeginObject jMenuRunnerReset "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = "Reset State of Machine"
+                    rolloverEnabled = False
+                    text = Reset
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = Reset
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+        EndObject
+        BeginObject jMenuHelp "javax.swing.JMenu"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                rolloverEnabled = False
+                text = Help
+            EndProperties
+            BeginInternalProperties
+                AppleMenu 11 = 0
+                Caption 8 = Help
+                Checked 11 = 0
+                Default 11 = 0
+                enabled 11 = 1
+                Mutex 11 = 0
+            EndInternalProperties
+            BeginObject jMenuHelpAbout "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = "About this Program"
+                    rolloverEnabled = False
+                    text = About
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = About
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+            BeginObject jMenuHelpSeparator1 "javax.swing.JSeparator"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = ""
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+            BeginObject jMenuHelpHelponTopic "javax.swing.JMenuItem"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    toolTipText = "Help on a Topic"
+                    rolloverEnabled = False
+                    text = "Help on Topic ..."
+                EndProperties
+                BeginInternalProperties
+                    AppleMenu 11 = 0
+                    Caption 8 = "Help on Topic ..."
+                    Checked 11 = 0
+                    Default 11 = 0
+                    enabled 11 = 1
+                    Mutex 11 = 0
+                EndInternalProperties
+            EndObject
+        EndObject
+    EndObject
+    BeginObject ssmToolBar "javax.swing.JToolBar"
+        LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+        BeginProperties
+            constraints = North
+            size = "350, 8"
+            location = "0, 0"
+            layout = "FlowLayout 0, 2, 2"
+            font = SansSerif-BOLD-10
+        EndProperties
+        BeginInternalProperties
+        EndInternalProperties
+        BeginObject tbNewButton "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                toolTipText = "New Code, erase current"
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "18, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+        BeginObject tbLoadButton "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                toolTipText = "Load Code from File"
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "27, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+        BeginObject tbReloadButton "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                toolTipText = "Reload Code from File"
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "36, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+        BeginObject tbSaveButton "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                toolTipText = "Save Code to File"
+                visible = False
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "45, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+        BeginObject tbStep1Button "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                toolTipText = "One Step"
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "54, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+        BeginObject tbStartButton "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                toolTipText = "Start Runner"
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "63, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+        BeginObject tbPauseButton "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                toolTipText = "Pause Runner"
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "72, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+        BeginObject tbResetButton "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "81, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+        BeginObject tbNewInstrButton "javax.swing.JButton"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                toolTipText = "New Instruction"
+                size = "7, 7"
+                rolloverEnabled = False
+                font = <inherit>
+                location = "90, 4"
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+        EndObject
+    EndObject
+    BeginObject memNRestSplitPane "javax.swing.JSplitPane"
+        LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+        BeginProperties
+            constraints = Center
+            dividerLocation = 465
+            size = "350, 235"
+            dividerSize = 8
+            location = "0, 15"
+            orientation = VERTICAL_SPLIT
+            foreground = black
+            font = Monospaced-PLAIN-12
+        EndProperties
+        BeginInternalProperties
+        EndInternalProperties
+        BeginObject codeNStackSplitPane "javax.swing.JSplitPane"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                dividerLocation = 500
+                size = "948, 464"
+                dividerSize = 6
+                location = "1, 1"
+                foreground = black
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+            BeginObject codeScrollPane "javax.swing.JScrollPane"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    size = "22, 26"
+                    location = "1, 1"
+                    font = <inherit>
+                EndProperties
+                BeginInternalProperties
+                EndInternalProperties
+                BeginObject codeTable "javax.swing.JTable"
+                    LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                    BeginProperties
+                        size = "343, 0"
+                        preferredScrollableViewportSize = "450, 600"
+                        font = <inherit>
+                        location = "0, 0"
+                    EndProperties
+                    BeginInternalProperties
+                    EndInternalProperties
+                EndObject
+            EndObject
+            BeginObject stackScrollPane "javax.swing.JScrollPane"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    size = "400, 544"
+                    location = "464, 1"
+                    font = <inherit>
+                EndProperties
+                BeginInternalProperties
+                EndInternalProperties
+                BeginObject stackTable "javax.swing.JTable"
+                    LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                    BeginProperties
+                        size = "-3, 0"
+                        preferredScrollableViewportSize = "450, 600"
+                        font = <inherit>
+                        location = "0, 0"
+                    EndProperties
+                    BeginInternalProperties
+                    EndInternalProperties
+                EndObject
+            EndObject
+        EndObject
+        BeginObject statusNOutputSplitPane "javax.swing.JSplitPane"
+            LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+            BeginProperties
+                dividerLocation = 64
+                size = "838, 174"
+                dividerSize = 6
+                location = "1, 475"
+                orientation = VERTICAL_SPLIT
+                foreground = black
+            EndProperties
+            BeginInternalProperties
+            EndInternalProperties
+            BeginObject statusScrollPane "javax.swing.JScrollPane"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    size = "836, 403"
+                    location = "1, 1"
+                    font = <inherit>
+                EndProperties
+                BeginInternalProperties
+                EndInternalProperties
+                BeginObject statusTable "javax.swing.JTable"
+                    LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                    BeginProperties
+                        size = "833, 0"
+                        font = <inherit>
+                        location = "0, 0"
+                    EndProperties
+                    BeginInternalProperties
+                    EndInternalProperties
+                EndObject
+            EndObject
+            BeginObject outputScrollPane "javax.swing.JScrollPane"
+                LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                BeginProperties
+                    size = "836, 76"
+                    location = "1, 37"
+                    font = <inherit>
+                EndProperties
+                BeginInternalProperties
+                EndInternalProperties
+                BeginObject outputTextArea "javax.swing.JTextArea"
+                    LayoutClass {5FA17216-8612-11D1-B2AD-006008A5C0A5} "SSMRunner"
+                    BeginProperties
+                        editable = False
+                        size = "833, 73"
+                        font = SansSerif-PLAIN-10
+                        location = "0, 0"
+                    EndProperties
+                    BeginInternalProperties
+                    EndInternalProperties
+                EndObject
+            EndObject
+        EndObject
+    EndObject
+EndObject

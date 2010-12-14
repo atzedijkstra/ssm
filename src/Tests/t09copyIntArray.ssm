@@ -1,1 +1,29 @@
-	BRA	mainCpInts:	LINK	0CpBeg:	LDL	-2	LDC	0	EQ	BRT	CpEnd	LDL	-2	LDC	1	SUB	STL	-2	LDL	-4	LDL	-2	ADD	LDA	0	LDL	-3	LDL	-2	ADD	STA	0	BRA	CpBegCpEnd:	UNLINK	STS	-3	AJS	-2	RETmain:	LINK	12	LDLA	1	LDLA	6		LDC	4	BSR	CpInts	UNLINK
+	BRA	main
+CpInts:	LINK	0
+CpBeg:	LDL	-2
+	LDC	0
+	EQ
+	BRT	CpEnd
+	LDL	-2
+	LDC	1
+	SUB
+	STL	-2
+	LDL	-4
+	LDL	-2
+	ADD
+	LDA	0
+	LDL	-3
+	LDL	-2
+	ADD
+	STA	0
+	BRA	CpBeg
+CpEnd:	UNLINK
+	STS	-3
+	AJS	-2
+	RET
+main:	LINK	12
+	LDLA	1
+	LDLA	6	
+	LDC	4
+	BSR	CpInts
+	UNLINK

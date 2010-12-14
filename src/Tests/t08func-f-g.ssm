@@ -1,1 +1,33 @@
-	BRA	mainf:	LINK	2	LDL	-3	LDL	-2	ADD	STL	1	LDL	-3	LDL	-2	MUL	STL	2	LDL	2	LDL	1	SUB	STR	RR	UNLINK	STS	-2	AJS	-1	RETg:	LINK	1	LDC	3	LDC	4	LDL	-2	BSR	f	LDR	RR	MUL	STL	1	UNLINK	STS	-1	RETmain:	LINK	0	LDC	5	BSR	g	UNLINK
+	BRA	main
+f:	LINK	2
+	LDL	-3
+	LDL	-2
+	ADD
+	STL	1
+	LDL	-3
+	LDL	-2
+	MUL
+	STL	2
+	LDL	2
+	LDL	1
+	SUB
+	STR	RR
+	UNLINK
+	STS	-2
+	AJS	-1
+	RET
+g:	LINK	1
+	LDC	3
+	LDC	4
+	LDL	-2
+	BSR	f
+	LDR	RR
+	MUL
+	STL	1
+	UNLINK
+	STS	-1
+	RET
+main:	LINK	0
+	LDC	5
+	BSR	g
+	UNLINK

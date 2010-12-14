@@ -1,1 +1,20 @@
-	BRA	MainDoIf:	LINK	1	LDL	-2	LDC	2	MOD	LDC	0	ne	brt	Then	LDC	0	STL	1	BRA	IfEndThen:	LDC	1	STL	1IfEnd:	UNLINK	STS	-1	RETMain:	LDC	10	BSR	DoIf	LDC	11	BSR	DoIf
+	BRA	Main
+DoIf:	LINK	1
+	LDL	-2
+	LDC	2
+	MOD
+	LDC	0
+	ne
+	brt	Then
+	LDC	0
+	STL	1
+	BRA	IfEnd
+Then:	LDC	1
+	STL	1
+IfEnd:	UNLINK
+	STS	-1
+	RET
+Main:	LDC	10
+	BSR	DoIf
+	LDC	11
+	BSR	DoIf
