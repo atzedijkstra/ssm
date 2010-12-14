@@ -1,8 +1,0 @@
-cc=A Condition Code (CC) encodes a result of a comparison. Four bits are used to encode the fact that the result of a cmp instruction is zero (Z), negative (N), a carry was needed (C) or overflow was detected (V).
-conditioncode=@cc
-
-sr=SR stands for Status Register. The status, called SR (status register) is not a real register but just an interpretation of the top of the stack. The top of the stack is used to store the condition codes resulting after a compare. Four bits, Z, N, C and V of the SR are used to encode the comparison result being zero, negative, carried and overflowed. These bits are only used by branches on conditions (i.e. beq).
-statusbits=See SR.
-
-prepostcondition=A kind of pre and postcondition is used to denote the effect of instructions. Behaviour is expressed using equations relating the state of the machine before (pre) execution of an instruction to the state after (post). Values of memory (M), registers (PC,SP,MP,RR) are subscripted with 'pre' resp 'post' to refer to the respective values before/after execution. No equation for a value means that the pre and post values are equal.
-

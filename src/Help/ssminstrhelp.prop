@@ -204,3 +204,18 @@ annote_descr=Annotate. A meta instruction (not producing code), annotating the s
 annote_prepost=
 annote_example=annote SP -1 0 red "Pushed constants" ; annote top 2 stack values
 
+ldh_descr=Load from Heap. Pushes a value pointed to by the value at the top of the stack. The pointer value is offset by a constant offset.
+ldh_prepost=
+ldh_example=ldc 5, sth, ldh 0
+
+ldmh_descr=Load Multiple from Heap. Pushes values pointed to by the value at the top of the stack. The pointer value is offset by a constant offset. Same as single load variant but the second inline parameter is size.
+ldmh_prepost=
+ldmh_example=ldc 1, ldc 2, ldc 3, stmh 3, ldmh 0 3
+
+sth_descr=Store into Heap. Pops 1 value from the stack and stores it into the heap. Pushes the heap address of that value on the stack.
+sth_prepost=
+sth_example=ldc 5, sth
+
+stmh_descr=Store Multiple into Heap. Pops values from the stack and stores it into the heap, retaining the order of the values. Same as single store variant but the inline parameter is size. Pushes the heap address of the last value on the stack.
+stmh_prepost=
+stmh_example=ldc 1, ldc 2, ldc 3, stmh 3
