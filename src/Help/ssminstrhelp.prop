@@ -64,7 +64,7 @@ stma_descr=Store Multiple via Address. Pops values from the stack and stores it 
 stma_prepost=displ = M_pre[PC_pre + 1], size = M_pre[PC_pre + 2], SP_post = SP_pre - size - 1, M_post[M_pre[SP_pre] + displ .. M_pre[SP_pre] + displ + size - 1] = M_pre[SP_post + 1 .. SP_post + size]
 stma_example=none
 
-ldr_descr=Load Register. Pushes a value from a register. Registers 0, 1, 2 and 3 are called PC (program counter), SP (stack pointer), MP (mark pointer) and RR (return register) respectively.
+ldr_descr=Load Register. Pushes a value from a register. Registers 0, 1, 2 and 3 are called PC (programcounter), SP (stackpointer), MP (markpointer) and RR (return register) respectively.
 ldr_prepost=SP_post = SP_pre + 1, M_post[SP_post] = REG_pre[ M_pre[PC_pre+1] ]
 ldr_example=ldr RR ; decrement register, ldc 1, sub, str RR
 

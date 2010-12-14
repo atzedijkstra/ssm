@@ -17,14 +17,14 @@ public class Registers extends AbstractMemoryCellModel
     public static final int     	PC = 0      ;
     public static final int     	SP = 1      ;
     public static final int     	MP = 2      ;
-    //public static final int     	RR = 3      ;
-    public static final int         HP = 4      ;
+    public static final int         HP = 3      ;
+    //public static final int     	RR = 4      ;
     
     private static final int     	nrRegs = 8  ;
     
     private static final String[]	regNames = { "R0", "R1", "R2", "R3", "R4", "R5", "R6", "R7" } ;
     
-    private static final String[]	regNamesAlias = { "PC", "SP", "MP", "RR", "HP" } ;
+    private static final String[]	regNamesAlias = { "PC", "SP", "MP", "HP", "RR" } ;
     
     //private MemoryCell          	cells[]  	;
     private int          	        cells[]  	;

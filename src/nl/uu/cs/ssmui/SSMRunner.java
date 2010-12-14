@@ -315,6 +315,7 @@ public class SSMRunner extends JFrame
 		statusScrollPane.setBorder(createTitledBorder("Status"));
 		statusTable.setVisible(true);
 		statusTable.setFont(null);
+		statusTable.setPreferredScrollableViewportSize(new java.awt.Dimension(1200, 40));
 		outputScrollPane.setVisible(true);
 		outputScrollPane.setFont(null);
 		outputScrollPane.setBorder(createTitledBorder("Output"));
@@ -815,6 +816,9 @@ public class SSMRunner extends JFrame
 	public void tbLoadButtonActionPerformed(java.awt.event.ActionEvent e)
 	{
 		JFileChooser chooser = new JFileChooser( recentLoadedFile ) ;
+		if (recentLoadedFile == null) {
+			chooser.setCurrentDirectory(new File ("."));
+		}
 		Utils.ExtensionFileFilter ff = new Utils.ExtensionFileFilter( "ssm" ) ;
 		chooser.setFileFilter( ff ) ;
 		if( chooser.showOpenDialog( this ) == JFileChooser.APPROVE_OPTION )

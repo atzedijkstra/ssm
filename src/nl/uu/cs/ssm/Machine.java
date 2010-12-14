@@ -512,8 +512,12 @@ public class Machine
                     	int endAddr = beginAddr + size - 1;
                     	registers.adjustHP(size);
                     	popMultiple(beginAddr, size);
-                    	memory.setAnnotationAt(beginAddr, new MemoryAnnotation("begin", null));
-                    	memory.setAnnotationAt(endAddr, new MemoryAnnotation("end", null));
+                    	if(size == 1) {
+                    		memory.setAnnotationAt(beginAddr, new MemoryAnnotation("begin / end", null));
+                    	} else {
+                    		memory.setAnnotationAt(beginAddr, new MemoryAnnotation("begin", null));
+                        	memory.setAnnotationAt(endAddr, new MemoryAnnotation("end", null));	
+                    	}
                     	push(endAddr);
                     	break;
                         
