@@ -304,7 +304,7 @@ public class SSMRunner extends JFrame
 		heapTable.setVisible(true);
 		heapTable.setPreferredScrollableViewportSize(new java.awt.Dimension(300, 600));
 		heapTable.setFont(null);
-		statusNOutputSplitPane.setDividerLocation(64);
+		statusNOutputSplitPane.setDividerLocation(100);
 		statusNOutputSplitPane.setDividerSize(6);
 		statusNOutputSplitPane.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 		statusNOutputSplitPane.setVisible(true);
@@ -315,7 +315,6 @@ public class SSMRunner extends JFrame
 		statusScrollPane.setBorder(createTitledBorder("Status"));
 		statusTable.setVisible(true);
 		statusTable.setFont(null);
-		statusTable.setPreferredScrollableViewportSize(new java.awt.Dimension(1200, 40));
 		outputScrollPane.setVisible(true);
 		outputScrollPane.setFont(null);
 		outputScrollPane.setBorder(createTitledBorder("Output"));
@@ -370,7 +369,7 @@ public class SSMRunner extends JFrame
 		getContentPane().add(ssmToolBar, "North");
 		getContentPane().add(memNRestSplitPane, "Center");
 
-		setSize(new java.awt.Dimension(1200, 720));
+		setSize(new java.awt.Dimension(1200, 800));
 
 		// event handling
 		tbNewButton.addActionListener(new java.awt.event.ActionListener() {

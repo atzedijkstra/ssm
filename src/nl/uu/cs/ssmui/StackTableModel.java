@@ -155,7 +155,6 @@ public class StackTableModel extends AbstractTableModel
 
     public void cellChanged( MemoryCellEvent e )
     {
-    	//fireTableDataChanged();
     	Object src = e.getSource() ;
     	int v ;
     	if ( src == memory )
