@@ -47,6 +47,8 @@ import nl.uu.cs.ssm.Utils;
 public class SSMRunner extends JFrame
     implements Messenger, FocusListener, TableModelListener
 {
+	private String title = "Simple Stack Machine Interpreter";
+	
 	private static final long serialVersionUID = 1L ;
 
 	public final static int STEP_BY_STEP		= 0 ;
@@ -325,7 +327,7 @@ public class SSMRunner extends JFrame
 		setFont(new java.awt.Font("SansSerif", 0, 12));
 		setJMenuBar(JMenuBar);
 		getContentPane().setLayout(new java.awt.BorderLayout(0, 0));
-		setTitle("Simple Stack Machine Interpreter");
+		setTitle(title);
 
 		JMenuBar.add(jMenuFile);
 		JMenuBar.add(jMenuRunner);
@@ -777,6 +779,7 @@ public class SSMRunner extends JFrame
 	            }
 	        }
 			fr.close() ;
+			setTitle(title + " - " + f.getName());
 		}
 		catch ( Exception ex )
 		{
