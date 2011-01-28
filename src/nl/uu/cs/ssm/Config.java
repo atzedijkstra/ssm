@@ -35,9 +35,9 @@ public class Config
     public static final int allowedAutomaticMemoryIncrease
     													= 100 ;
     
-    public static final String version()                { return "1.3.3" ; }
+    public static final String version()                { return "2.0" ; }
     
-    public static final String versionDate()            { return "2002 04 15" ; }
+    public static final String versionDate()            { return "28 January 2011" ; }
     
     public static final String author()                 { return "Atze Dijkstra, Utrecht University" ; }
     
