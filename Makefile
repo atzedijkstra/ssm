@@ -32,3 +32,7 @@ $(SSM_JAR): $(SSM_SRC) $(SSM_SRC_HELP) $(SSM_SRC_IMGS) $(SSM_MKF)
 clean:
 	rm -rf $(DIR_BLD)
 
+dist: ssm
+	cp $(DIR_SRC)/ssm.sh $(DIR_SRC)/ssm.bat $(DIR_BLD) && \
+	cd $(DIR_BLD) && \
+	tar cfz ssm-$(shell date +%Y%m%d).tgz ssm.jar ssm.sh ssm.bat
