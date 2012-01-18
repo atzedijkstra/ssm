@@ -72,7 +72,7 @@ ldrr_descr=Load Register from Register. Copy the content of the second register 
 ldrr_prepost=REG_post[ M_pre[PC_pre+1] ] = REG_pre[ M_pre[PC_pre+2] ]
 ldrr_example=ldrr SP MP ; SP <- MP
 
-str_descr=Store Register. Pops a value from the stack and stores it in a location relative to the markpointer. See also ldr.
+str_descr=Store Register. Pops a value from the stack and stores it in the specified register. See also ldr.
 str_prepost=SP_post = SP_pre - 1, REG_post[ M_pre[PC_pre+1] ] = M_pre[SP_pre]
 str_example=@ldr_example
 
