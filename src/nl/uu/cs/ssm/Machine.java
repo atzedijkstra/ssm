@@ -485,7 +485,7 @@ public class Machine
                                 ByteBuffer b = ByteBuffer.allocate(4);
                                 b.putInt(pop());
                                 try {
-                                    messenger.println( "" + new String(b.array(), "UTF-32") ) ;
+                                    messenger.println( "" + new String(b.array(), "UTF-32BE") ) ;
                                 } catch (UnsupportedEncodingException e) {
                                     messenger.println("Error: UTF-32 encoding missing.");
                                 }
