@@ -163,6 +163,8 @@ public class Instruction
      */
 	protected final static int		TR_PR_INT	= 0 	;
 	protected final static int		TR_PR_CHAR	= 1 	;
+	protected final static int		TR_IN_INT	= 2 	;
+	protected final static int		TR_IN_CHAR	= 3 	;
 
     /**
      * Metas

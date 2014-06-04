@@ -12,6 +12,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileReader;
+import java.io.UnsupportedEncodingException;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;
@@ -22,6 +24,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollBar;
 import javax.swing.JTable;
 import javax.swing.KeyStroke;
@@ -653,6 +656,42 @@ public class SSMRunner extends JFrame
 	    outputTextArea.append( s ) ;
 	    outputTextArea.append( "\n" ) ;
 	}
+
+    public int promptInt() {
+        while(true) {
+            try {
+                String s = JOptionPane.showInputDialog(this,
+                    "Please enter an integer.","Integer requested", JOptionPane.QUESTION_MESSAGE);
+                if (s == null) {
+                    return 0;
+                }
+                return Integer.parseInt(s);
+            }
+            catch (NumberFormatException e) {
+                continue;  // Ask again
+            }
+        }
+    }
+
+    public int promptChar() {
+        while(true) {
+            String s = JOptionPane.showInputDialog(this,
+                "Please enter a character.","Character requested", JOptionPane.QUESTION_MESSAGE);
+            if (s == null) {
+                return 0;
+            }
+            if (s.length() == 0) {
+                continue;
+            }
+            byte[] b = {};
+            try {
+                b = s.getBytes("UTF-32");
+            } catch (UnsupportedEncodingException e) {
+                println("Error: UTF-32 encoding missing.");
+            }
+            return ByteBuffer.wrap(b).getInt();
+        }
+    }
   	
 	// Close the window when the close box is clicked
 	void thisWindowClosing(java.awt.event.WindowEvent e)

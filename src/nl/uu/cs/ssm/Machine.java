@@ -490,6 +490,12 @@ public class Machine
                                     messenger.println("Error: UTF-32 encoding missing.");
                                 }
                                 break;
+                            case Instruction.TR_IN_INT :
+                                push(messenger.promptInt());
+                                break;
+                            case Instruction.TR_IN_CHAR :
+                                push(messenger.promptChar());
+                                break;
                             default : break ;
                         }
                         break ;
