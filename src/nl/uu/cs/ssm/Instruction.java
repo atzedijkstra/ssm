@@ -162,6 +162,7 @@ public class Instruction
      * Traps
      */
 	protected final static int		TR_PR_INT	= 0 	;
+	protected final static int		TR_PR_CHAR	= 1 	;
 
     /**
      * Metas

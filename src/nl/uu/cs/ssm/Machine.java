@@ -9,6 +9,8 @@
 package nl.uu.cs.ssm ;
 
 import java.awt.Color;
+import java.io.UnsupportedEncodingException;
+import java.nio.ByteBuffer;
 
 public class Machine
 {
@@ -479,7 +481,15 @@ public class Machine
                             case Instruction.TR_PR_INT :
                                 messenger.println( "" + pop() ) ;
                                 break ;
-                                
+                            case Instruction.TR_PR_CHAR :
+                                ByteBuffer b = ByteBuffer.allocate(4);
+                                b.putInt(pop());
+                                try {
+                                    messenger.println( "" + new String(b.array(), "UTF-32") ) ;
+                                } catch (UnsupportedEncodingException e) {
+                                    messenger.println("Error: UTF-32 encoding missing.");
+                                }
+                                break;
                             default : break ;
                         }
                         break ;
