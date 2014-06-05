@@ -496,6 +496,12 @@ public class Machine
                             case Instruction.TR_IN_CHAR :
                                 push(messenger.promptChar());
                                 break;
+                            case Instruction.TR_IN_CHAR_ARRAY :
+                                push(0);
+                                for (int i : messenger.promptCharArray()) {
+                                    push(i);
+                                }
+                                break;
                             default : break ;
                         }
                         break ;

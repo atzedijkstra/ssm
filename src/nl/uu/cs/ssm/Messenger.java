@@ -24,4 +24,10 @@ public interface Messenger
      */
     public int promptChar();
 
+    /**
+     * Asks the user for a string (i.e. via a dialog)
+     * @return Returns an array of unicode integer code points
+     */
+    public int[] promptCharArray();
+
 }

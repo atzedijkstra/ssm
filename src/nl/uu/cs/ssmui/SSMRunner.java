@@ -686,6 +686,19 @@ public class SSMRunner extends JFrame
             return s.codePointAt(0);
         }
     }
+
+    public int[] promptCharArray() {
+        String s = JOptionPane.showInputDialog(this,
+            "Please enter a string.","String requested", JOptionPane.QUESTION_MESSAGE);
+        if (s == null || s.length() == 0) {
+            return new int[0];
+        }
+        int[] result = new int[s.length()];
+        for(int i = 0; i < s.length(); i++) {
+            result[i] = s.codePointAt(i);
+        }
+        return result;
+    }
   	
 	// Close the window when the close box is clicked
 	void thisWindowClosing(java.awt.event.WindowEvent e)

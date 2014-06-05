@@ -165,6 +165,7 @@ public class Instruction
 	protected final static int		TR_PR_CHAR	= 1 	;
 	protected final static int		TR_IN_INT	= 2 	;
 	protected final static int		TR_IN_CHAR	= 3 	;
+	protected final static int		TR_IN_CHAR_ARRAY = 4;
 
     /**
      * Metas
