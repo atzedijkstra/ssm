@@ -683,13 +683,7 @@ public class SSMRunner extends JFrame
             if (s.length() == 0) {
                 continue;
             }
-            byte[] b = {};
-            try {
-                b = s.getBytes("UTF-32BE");
-            } catch (UnsupportedEncodingException e) {
-                println("Error: UTF-32 encoding missing.");
-            }
-            return ByteBuffer.wrap(b).getInt();
+            return s.codePointAt(0);
         }
     }
   	
