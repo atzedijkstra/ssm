@@ -325,7 +325,7 @@ public class SSMRunner extends JFrame
 		outputScrollPane.setBorder(createTitledBorder("Output"));
 		outputTextArea.setVisible(true);
 		outputTextArea.setEditable(false);
-		outputTextArea.setFont(new java.awt.Font("SansSerif", 0, 10));
+		outputTextArea.setFont(new java.awt.Font("SansSerif", 0, 12));
 		setLocation(new java.awt.Point(0, 0));
 		setFont(new java.awt.Font("SansSerif", 0, 12));
 		setJMenuBar(JMenuBar);
@@ -650,11 +650,16 @@ public class SSMRunner extends JFrame
         }
         stepManager.endForwardStep() ;
 	}
-	
+
 	public void println( String s )
 	{
 	    outputTextArea.append( s ) ;
 	    outputTextArea.append( "\n" ) ;
+	}
+
+	public void print( String s )
+	{
+	    outputTextArea.append( s ) ;
 	}
 
     public int promptInt()

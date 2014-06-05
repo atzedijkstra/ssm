@@ -486,7 +486,7 @@ public class Machine
                                 b.putInt(pop());
                                 try
                                 {
-                                    messenger.println( "" + new String(b.array(), "UTF-32BE") ) ;
+                                    messenger.print( "" + new String(b.array(), "UTF-32BE") ) ;
                                 }
                                 catch (UnsupportedEncodingException e)
                                 {
