@@ -484,9 +484,12 @@ public class Machine
                             case Instruction.TR_PR_CHAR :
                                 ByteBuffer b = ByteBuffer.allocate(4);
                                 b.putInt(pop());
-                                try {
+                                try
+                                {
                                     messenger.println( "" + new String(b.array(), "UTF-32BE") ) ;
-                                } catch (UnsupportedEncodingException e) {
+                                }
+                                catch (UnsupportedEncodingException e)
+                                {
                                     messenger.println("Error: UTF-32 encoding missing.");
                                 }
                                 break;
@@ -498,7 +501,8 @@ public class Machine
                                 break;
                             case Instruction.TR_IN_CHAR_ARRAY :
                                 push(0);
-                                for (int i : messenger.promptCharArray()) {
+                                for (int i : messenger.promptCharArray())
+                                {
                                     push(i);
                                 }
                                 break;

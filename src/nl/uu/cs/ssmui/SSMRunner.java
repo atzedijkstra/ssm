@@ -657,44 +657,56 @@ public class SSMRunner extends JFrame
 	    outputTextArea.append( "\n" ) ;
 	}
 
-    public int promptInt() {
-        while(true) {
-            try {
+    public int promptInt()
+    {
+        while(true)
+        {
+            try
+            {
                 String s = JOptionPane.showInputDialog(this,
                     "Please enter an integer.","Integer requested", JOptionPane.QUESTION_MESSAGE);
-                if (s == null) {
+                if (s == null)
+                {
                     return 0;
                 }
                 return Integer.parseInt(s);
             }
-            catch (NumberFormatException e) {
+            catch (NumberFormatException e)
+            {
                 continue;  // Ask again
             }
         }
     }
 
-    public int promptChar() {
-        while(true) {
+    public int promptChar()
+    {
+        while(true)
+        {
             String s = JOptionPane.showInputDialog(this,
                 "Please enter a character.","Character requested", JOptionPane.QUESTION_MESSAGE);
-            if (s == null) {
+            if (s == null)
+            {
                 return 0;
             }
-            if (s.length() == 0) {
+            if (s.length() == 0)
+            {
                 continue;
             }
             return s.codePointAt(0);
         }
     }
 
-    public int[] promptCharArray() {
+    public int[] promptCharArray()
+    {
         String s = JOptionPane.showInputDialog(this,
             "Please enter a string.","String requested", JOptionPane.QUESTION_MESSAGE);
-        if (s == null || s.length() == 0) {
+        if (s == null || s.length() == 0)
+        {
             return new int[0];
         }
         int[] result = new int[s.length()];
-        for(int i = 0; i < s.length(); i++) {
+        for(int i = 0; i < s.length(); i++)
+        {
             result[i] = s.codePointAt(i);
         }
         return result;
