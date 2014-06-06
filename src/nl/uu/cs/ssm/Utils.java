@@ -10,6 +10,8 @@ package nl.uu.cs.ssm ;
 
 import java.awt.Rectangle;
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Enumeration;
@@ -281,5 +283,13 @@ public class Utils
 		Rectangle r = c.getBounds() ;
 		scrollComponentTo( c, new Rectangle( 0, r.height-2, r.width, 2 ) ) ;
 	}
-	
+
+    /**
+     * Convert unicode code point to String
+     */
+    public static String codePointToString(int n) throws UnsupportedEncodingException {
+        ByteBuffer b = ByteBuffer.allocate(4);
+        b.putInt(n);
+        return new String(b.array(), "UTF-32BE");
+    }
 }

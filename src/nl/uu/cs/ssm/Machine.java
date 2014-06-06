@@ -10,7 +10,6 @@ package nl.uu.cs.ssm ;
 
 import java.awt.Color;
 import java.io.UnsupportedEncodingException;
-import java.nio.ByteBuffer;
 
 public class Machine
 {
@@ -482,11 +481,9 @@ public class Machine
                                 messenger.println( "" + pop() ) ;
                                 break ;
                             case Instruction.TR_PR_CHAR :
-                                ByteBuffer b = ByteBuffer.allocate(4);
-                                b.putInt(pop());
                                 try
                                 {
-                                    messenger.print( "" + new String(b.array(), "UTF-32BE") ) ;
+                                    messenger.print( "" + Utils.codePointToString(pop()) ) ;
                                 }
                                 catch (UnsupportedEncodingException e)
                                 {
