@@ -499,9 +499,10 @@ public class Machine
                                 break;
                             case Instruction.TR_IN_CHAR_ARRAY :
                                 push(0);
-                                for (int i : messenger.promptCharArray())
+                                int[] chars = messenger.promptCharArray();
+                                for (int i = chars.length - 1; i >= 0; i--)
                                 {
-                                    push(i);
+                                    push(chars[i]);
                                 }
                                 break;
                             case Instruction.TR_FILE_OPEN_READ :
@@ -513,7 +514,7 @@ public class Machine
                                     filename.append((char)n);
                                     n = pop();
                                 }
-                                String fname = filename.reverse().toString();
+                                String fname = filename.toString();
                                 try
                                 {
                                     boolean readOnly = state.inlineOpnds[0] == Instruction.TR_FILE_OPEN_READ;
