@@ -196,7 +196,8 @@ halt_descr=Halt execution. Machine stops executing instructions.
 halt_prepost=
 halt_example=halt
 
-trap_descr=Trap to environment function. Trap invokes a systemcall, which one is determined by its argument. Currently just 1 call exists, print the topmost element on the stack as an integer in the output window.
+
+trap_descr=Trap to environment function. Trap invokes a systemcall determined by its argument. Currently, trap supports the following system calls: <ol> <li value="0">Pop the topmost element from the stack and print it as an integer.</li> <li value="1">Pop the topmost element from the stack and print it as a unicode character.</li> <li value="10">Ask the user for an integer input and push it on the stack.</li> <li value="11">Ask the user for a unicode character input and push it on the stack.</li> <li value="12">Ask the user for a sequence of unicode characters input and push the characters on the stack terminated by a null-character.</li> <li value="20">Pop a null-terminated file name from the stack, open the file for reading and push a file pointer on the stack.</li> <li value="21">Pop a null-terminated file name from the stack, open the file for writing and push a file pointer on the stack.</li> <li value="22">Pop a file pointer from the stack, read a character from the file pointed to by the file pointer and push the character on the stack.</li> <li value="23">Pop a character and a file pointer from the stack, write the character to the file pointed to by the file pointer.</li> <li value="24">Pop a file pointer from the stack and close the corresponding file.</li> </ol>
 trap_prepost=
 trap_example=ldc 5, trap 0 ; print 5 on output
 
