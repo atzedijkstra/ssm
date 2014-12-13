@@ -161,8 +161,16 @@ public class Instruction
     /**
      * Traps
      */
-	protected final static int		TR_PR_INT	= 0 	;
-
+	protected final static int		TR_PR_INT			= 00;
+	protected final static int		TR_PR_CHAR			= 01;
+	protected final static int		TR_IN_INT			= 10;
+	protected final static int		TR_IN_CHAR			= 11;
+	protected final static int		TR_IN_CHAR_ARRAY	= 12;
+	protected final static int		TR_FILE_OPEN_READ	= 20;
+	protected final static int		TR_FILE_OPEN_WRITE	= 21;
+	protected final static int		TR_FILE_READ		= 22;
+	protected final static int		TR_FILE_WRITE		= 23;
+	protected final static int		TR_FILE_CLOSE		= 24;
     /**
      * Metas
      */

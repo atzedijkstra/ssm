@@ -9,6 +9,8 @@
 package nl.uu.cs.ssm ;
 
 import java.awt.Color;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 
 public class Machine
 {
@@ -479,7 +481,104 @@ public class Machine
                             case Instruction.TR_PR_INT :
                                 messenger.println( "" + pop() ) ;
                                 break ;
-                                
+                            case Instruction.TR_PR_CHAR :
+                                try
+                                {
+                                    messenger.print( "" + Utils.codePointToString(pop()) ) ;
+                                }
+                                catch (UnsupportedEncodingException e)
+                                {
+                                    messenger.println("Error: UTF-32 encoding missing.");
+                                }
+                                break;
+                            case Instruction.TR_IN_INT :
+                                push(messenger.promptInt());
+                                break;
+                            case Instruction.TR_IN_CHAR :
+                                push(messenger.promptChar());
+                                break;
+                            case Instruction.TR_IN_CHAR_ARRAY :
+                                push(0);
+                                int[] chars = messenger.promptCharArray();
+                                for (int i = chars.length - 1; i >= 0; i--)
+                                {
+                                    push(chars[i]);
+                                }
+                                break;
+                            case Instruction.TR_FILE_OPEN_READ :
+                            case Instruction.TR_FILE_OPEN_WRITE :
+                                StringBuilder filename = new StringBuilder();
+                                int n = pop();
+                                while (n != 0)
+                                {
+                                    filename.append((char)n);
+                                    n = pop();
+                                }
+                                String fname = filename.toString();
+                                try
+                                {
+                                    boolean readOnly = state.inlineOpnds[0] == Instruction.TR_FILE_OPEN_READ;
+                                    push(state.openFile(fname, readOnly));
+                                }
+                                catch (IOException e)
+                                {
+                                    messenger.println("Error: file "+fname+" not found");
+                                }
+                                break;
+                            case Instruction.TR_FILE_READ :
+                                try
+                                {
+                                    push(state.readFromFile(pop()));
+                                }
+                                catch (IOException e)
+                                {
+                                    messenger.println("Error: cannot read from file.");
+                                }
+                                catch (IndexOutOfBoundsException e)
+                                {
+                                    messenger.println("Error: invalid file pointer.");
+                                }
+                                catch (NullPointerException e)
+                                {
+                                    messenger.println("Error: invalid file pointer.");
+                                }
+                                break;
+                            case Instruction.TR_FILE_WRITE :
+                                try
+                                {
+                                    push(state.writeToFile(pop(), pop()));
+                                }
+                                catch (IOException e)
+                                {
+                                    messenger.println("Error: cannot write to file.");
+                                }
+                                catch (IndexOutOfBoundsException e)
+                                {
+                                    messenger.println("Error: invalid file pointer.");
+                                }
+                                catch (NullPointerException e)
+                                {
+                                    messenger.println("Error: invalid file pointer.");
+                                }
+                                break;
+                            case Instruction.TR_FILE_CLOSE :
+                                try
+                                {
+                                    state.closeFile(pop());
+                                }
+                                catch (IOException e)
+                                {
+                                    messenger.println("Error: cannot close file.");
+                                }
+                                catch (IndexOutOfBoundsException e)
+                                {
+                                    messenger.println("Error: invalid file pointer.");
+                                }
+                                catch (NullPointerException e)
+                                {
+                                    messenger.println("Error: invalid file pointer.");
+                                }
+                                break;
                             default : break ;
                         }
                         break ;

@@ -12,6 +12,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileReader;
+import java.io.UnsupportedEncodingException;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;
@@ -22,6 +24,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollBar;
 import javax.swing.JTable;
 import javax.swing.KeyStroke;
@@ -322,7 +325,7 @@ public class SSMRunner extends JFrame
 		outputScrollPane.setBorder(createTitledBorder("Output"));
 		outputTextArea.setVisible(true);
 		outputTextArea.setEditable(false);
-		outputTextArea.setFont(new java.awt.Font("SansSerif", 0, 10));
+		outputTextArea.setFont(new java.awt.Font("SansSerif", 0, 12));
 		setLocation(new java.awt.Point(0, 0));
 		setFont(new java.awt.Font("SansSerif", 0, 12));
 		setJMenuBar(JMenuBar);
@@ -647,12 +650,72 @@ public class SSMRunner extends JFrame
         }
         stepManager.endForwardStep() ;
 	}
-	
+
 	public void println( String s )
 	{
 	    outputTextArea.append( s ) ;
 	    outputTextArea.append( "\n" ) ;
 	}
+
+	public void print( String s )
+	{
+	    outputTextArea.append( s ) ;
+	}
+
+    public int promptInt()
+    {
+        while(true)
+        {
+            try
+            {
+                String s = JOptionPane.showInputDialog(this,
+                    "Please enter an integer.","Integer requested", JOptionPane.QUESTION_MESSAGE);
+                if (s == null)
+                {
+                    return 0;
+                }
+                return Integer.parseInt(s);
+            }
+            catch (NumberFormatException e)
+            {
+                continue;  // Ask again
+            }
+        }
+    }
+
+    public int promptChar()
+    {
+        while(true)
+        {
+            String s = JOptionPane.showInputDialog(this,
+                "Please enter a character.","Character requested", JOptionPane.QUESTION_MESSAGE);
+            if (s == null)
+            {
+                return 0;
+            }
+            if (s.length() == 0)
+            {
+                continue;
+            }
+            return s.codePointAt(0);
+        }
+    }
+
+    public int[] promptCharArray()
+    {
+        String s = JOptionPane.showInputDialog(this,
+            "Please enter a string.","String requested", JOptionPane.QUESTION_MESSAGE);
+        if (s == null || s.length() == 0)
+        {
+            return new int[0];
+        }
+        int[] result = new int[s.length()];
+        for(int i = 0; i < s.length(); i++)
+        {
+            result[i] = s.codePointAt(i);
+        }
+        return result;
+    }
   	
 	// Close the window when the close box is clicked
 	void thisWindowClosing(java.awt.event.WindowEvent e)
