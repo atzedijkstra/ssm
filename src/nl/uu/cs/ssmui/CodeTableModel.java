@@ -362,7 +362,7 @@ public class CodeTableModel extends AbstractTableModel
         return columnNames[ column ] ;
     }
 
-    public Class getColumnClass( int column )
+    public Class<?> getColumnClass( int column )
     {
     	if ( column == C_PC || column == C_BP )
     		return ImageIcon.class ;

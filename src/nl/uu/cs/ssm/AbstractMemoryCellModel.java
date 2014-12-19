@@ -9,13 +9,14 @@
 package nl.uu.cs.ssm ;
 
 import java.util.Enumeration;
+import java.util.EventListener;
 
 abstract class AbstractMemoryCellModel extends Model
 	implements MemoryCellModel
 {
     protected void fireCellChange( MemoryCellModel m, MemoryCellEvent ev )
     {
-    	for( Enumeration e = getListeners() ; e.hasMoreElements() ; )
+    	for( Enumeration<EventListener> e = getListeners() ; e.hasMoreElements() ; )
     	{
     		MemoryCellListener l = (MemoryCellListener)e.nextElement() ;
     		l.cellChanged( ev ) ;

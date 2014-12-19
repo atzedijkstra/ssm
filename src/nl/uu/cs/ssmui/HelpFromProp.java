@@ -62,7 +62,7 @@ public class HelpFromProp
 		if ( topics == null )
 		{
 			Hashtable<String,String> ts = new Hashtable<String,String>() ;
-			for ( Enumeration ps = props.propertyNames() ; ps.hasMoreElements() ; )
+			for ( Enumeration<?> ps = props.propertyNames() ; ps.hasMoreElements() ; )
 			{
 				String s = (String)ps.nextElement() ;
 				if ( doForInstr )

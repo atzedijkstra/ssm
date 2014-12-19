@@ -26,7 +26,7 @@ public class Model
 		listeners.removeElement( l ) ;
 	}
 	
-	protected Enumeration getListeners()
+	protected Enumeration<EventListener> getListeners()
 	{
 		return listeners.elements() ;
 	}

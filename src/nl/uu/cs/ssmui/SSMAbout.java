@@ -51,7 +51,7 @@ public class SSMAbout extends JFrame
 		versionLabel.setFont(null);
 		versionLabel.setSize(new java.awt.Dimension(80, 20));
 
-		authorLabel.setText("Author & ©:");
+		authorLabel.setText("Copyright:");
 		authorLabel.setLocation(new java.awt.Point(10, 50));
 		authorLabel.setVisible(true);
 		authorLabel.setFont(null);

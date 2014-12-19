@@ -104,7 +104,7 @@ public class HeapTableModel extends AbstractTableModel implements MemoryCellList
 		return columnNames[column] ;
     }
 
-    public Class getColumnClass(int column) {
+    public Class<?> getColumnClass(int column) {
     	
     	if (column == C_ANNOTE)
 	    	return ColoredText.class;

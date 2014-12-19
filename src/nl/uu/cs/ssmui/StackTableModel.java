@@ -145,7 +145,7 @@ public class StackTableModel extends AbstractTableModel
         return columnNames[ column ] ;
     }
 
-    public Class getColumnClass( int column )
+    public Class<?> getColumnClass( int column )
     {
     	if ( column == C_ANNOTE )
 	    	return ColoredText.class ;

@@ -62,7 +62,7 @@ public class SSMRunner extends JFrame
 	public final static int SETUP_READY			= 1 ;
 	
 	
-    public static Class tableModelColumnClass ;
+    public static Class<?> tableModelColumnClass ;
     
     static
     {

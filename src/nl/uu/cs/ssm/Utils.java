@@ -173,7 +173,7 @@ public class Utils
 	{
 		private Vector<Object> extensions = new Vector<Object>() ;
 		
-		public ExtensionFileFilter( Enumeration exts )
+		public ExtensionFileFilter( Enumeration<Object> exts )
 		{
 			while ( exts.hasMoreElements() )
 				addExtension( (String)exts.nextElement() ) ;

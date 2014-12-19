@@ -14,6 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.EventListener;
 
 public class MachineState extends Model
 {
@@ -46,7 +47,7 @@ public class MachineState extends Model
     
     protected void fireStateChange( MachineStateEvent ev )
     {
-    	for( Enumeration e = getListeners() ; e.hasMoreElements() ; )
+    	for( Enumeration<EventListener> e = getListeners() ; e.hasMoreElements() ; )
     	{
     		MachineStateListener l = (MachineStateListener)e.nextElement() ;
     		l.stateChanged( ev ) ;

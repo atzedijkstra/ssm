@@ -104,7 +104,7 @@ public class StatusTableModel extends AbstractTableModel
         return column == C_SR ? "SR" : Registers.getRegNAliasName( column ) ;
     }
 
-    public Class getColumnClass( int column )
+    public Class<?> getColumnClass( int column )
     {
         return SSMRunner.tableModelColumnClass ;
     }

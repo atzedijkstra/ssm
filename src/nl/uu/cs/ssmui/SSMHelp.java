@@ -44,7 +44,7 @@ public class SSMHelp extends JFrame
 	javax.swing.JButton findButton = new javax.swing.JButton();
 	javax.swing.JButton allTopicsButton = new javax.swing.JButton();
 	javax.swing.JScrollPane foundTopicsScrollPane = new javax.swing.JScrollPane();
-	javax.swing.JList foundTopicsList = new javax.swing.JList();
+	javax.swing.JList<HelpTopic> foundTopicsList = new javax.swing.JList<HelpTopic>();
 // END GENERATED CODE
 
 	public SSMHelp( Help h )
@@ -324,7 +324,7 @@ public class SSMHelp extends JFrame
 	
 	public void foundTopicsListMouseReleased(java.awt.event.MouseEvent e)
 	{
-	    HelpTopic helpTopic = (HelpTopic)foundTopicsList.getSelectedValue() ;
+	    HelpTopic helpTopic = foundTopicsList.getSelectedValue() ;
 	    if ( helpTopic != null )
 	        displayOneSelectedHelp( helpTopic ) ;
 	}
