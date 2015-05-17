@@ -12,8 +12,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.FileReader;
-import java.io.UnsupportedEncodingException;
-import java.nio.ByteBuffer;
+import java.io.Reader;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Vector;
@@ -148,7 +147,7 @@ public class SSMRunner extends JFrame
 		setupState = SETUP_BUSY ;
 		machineState = new MachineState( 5000, 2000, this ) ; // TBD: automatic increase with reasonable increments
 		machine = new Machine( machineState, this ) ;
-		stepManager = new StepManager( machine ) ;
+		stepManager = new StepManager( machine, true ) ;
 		
 	    codeTableModel = new CodeTableModel( this, machineState ) ;
 	    stackTableModel = new StackTableModel( machineState ) ;
@@ -810,18 +809,16 @@ public class SSMRunner extends JFrame
 	        loadFile( recentLoadedFile ) ;
 	}
 	
-	protected void loadFile( File f )
-	{
+	protected void load (Reader r) {
 		setupState = SETUP_BUSY ;
 
 		String msg ;
-		recentLoadedFile = f ;
+
 	    try
 	    {
 	    	Vector<String> leftOverLabels ;
 	    	AssemblyParseResult apr ;
-	        FileReader fr = new FileReader( f ) ;
-	        AssemblyParser ap = new AssemblyParser( fr ) ;
+	        AssemblyParser ap = new AssemblyParser( r ) ;
 			reset() ;
 			codeTableModel.parseInitialize() ;
 	        for ( apr = null ; ! ap.isAtEOF() ; )
@@ -841,8 +838,6 @@ public class SSMRunner extends JFrame
 	                    apr.addLabels( leftOverLabels ) ;
 	            }
 	        }
-			fr.close() ;
-			setTitle(title + " - " + f.getName());
 		}
 		catch ( Exception ex )
 		{
@@ -857,6 +852,22 @@ public class SSMRunner extends JFrame
 		resetToInitialState() ;
 
 		setupState = SETUP_READY ;
+	}
+
+	protected void loadFile( File f )
+	{
+		recentLoadedFile = f ;
+	    try
+	    {
+	        FileReader fr = new FileReader( f ) ;
+	        load(fr);
+			fr.close() ;
+			setTitle(title + " - " + f.getName());
+		}
+		catch ( Exception ex )
+		{
+		    ex.printStackTrace() ;
+		}
 	}
 	
 	class SSMFileFilter extends javax.swing.filechooser.FileFilter

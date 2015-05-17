@@ -381,7 +381,7 @@ public class CodeTableModel extends AbstractTableModel
 	    	{
 	    		//fireTableChanged( new TableModelEvent( this, row ) ) ;
 	    		fireTableRowsUpdated( row, row ) ;
-	    		if ( ! ssmRunner.isSettingUp() )
+	    		if ( ssmRunner != null &&  ! ssmRunner.isSettingUp() )
 		    		ssmRunner.println( "Warning: code modified at " + Utils.asHex( e.cellIndex ) ) ;
     		}
     	}

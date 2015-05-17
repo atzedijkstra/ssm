@@ -30,16 +30,17 @@ public class StepManager
 	private Vector<Vector<UndoableEvent>> history ;
 	private Vector<UndoableEvent> curStepHistory ;
 	
-	private StepManager( Memory m, Registers r )
+	private StepManager( Memory m, Registers r, boolean enableHistory )
 	{
 		memory = m ;
 		registers = r ;
-		history = new Vector<Vector<UndoableEvent>>() ;
+		if(enableHistory)
+			history = new Vector<Vector<UndoableEvent>>() ;
 	}
 	
-	protected StepManager( Machine m )
+	protected StepManager( Machine m, boolean enableHistory )
 	{
-		this( m.memory(), m.registers() ) ;
+		this( m.memory(), m.registers(), enableHistory ) ;
 		machineState = m.state() ;
 	}
 	
@@ -66,18 +67,19 @@ public class StepManager
 		machineState.removeMachineStateListener( this ) ;
 		memory.removeMemoryCellListener( this ) ;
 		registers.removeMemoryCellListener( this ) ;
-		history.addElement( curStepHistory ) ;
+		if(history != null)
+			history.addElement( curStepHistory ) ;
 	}
 	
 	protected boolean canDoBackStep()
 	{
-		return history.size() > 0 ;
+		return history != null && history.size() > 0 ;
 	}
 	
 	protected void backStep()
 	{
 		int sz ;
-		if ( (sz=history.size()) > 0 )
+		if ( history != null && (sz=history.size()) > 0 )
 		{
 			Vector<UndoableEvent> events = history.elementAt( sz-1 ) ;
 			for ( int i = events.size() - 1 ; i >= 0 ; i-- )
