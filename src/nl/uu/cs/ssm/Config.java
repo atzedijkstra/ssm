@@ -37,7 +37,7 @@ public class Config
     
     public static final String version()                { return "2.2.0" ; }
     
-    public static final String versionDate()            { return "June 3, 2015" ; }
+    public static final String versionDate()            { return "June 16, 2015" ; }
     
     public static final String author()                 { return "Atze Dijkstra, Utrecht University" ; }
     

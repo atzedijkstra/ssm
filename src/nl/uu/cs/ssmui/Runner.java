@@ -56,11 +56,13 @@ public class Runner extends Thread
 	   System.out.println("Simple Stack Machine Interpreter");
 	   System.out.println("Version " + Config.version() + ", " + Config.versionDate());
 	   System.out.println("usage: [--clisteps <steps>] [--cli] [--file <path> OR --stdin]");
-	   System.out.println("\t--clisteps <steps>: The amount of steps to run. -1 for infinite(default). Only in cli mode");
-	   System.out.println("\t--stdin: Read code from stdin");
-	   System.out.println("\t--file <path>: Read code from path");
-	   System.out.println("\t--cli: No GUI, runs code and exits on halt");
-	   System.out.println("\t--guidelay: Amount of time to sleep in milliseconds between steps in the GUI. Default: 50");
+	   System.out.println("  --help             : Print this help");
+	   System.out.println("  --version          : Print version");
+	   System.out.println("  --clisteps <steps> : The amount of steps to run. -1 for infinite(default). Only in cli mode");
+	   System.out.println("  --stdin            : Read code from stdin");
+	   System.out.println("  --file <path>      : Read code from path");
+	   System.out.println("  --cli              : No GUI, runs code and exits on halt");
+	   System.out.println("  --guidelay         : Amount of time to sleep in milliseconds between steps in the GUI. Default: 50");
 	   System.exit(1);
    }
 
@@ -92,6 +94,13 @@ public class Runner extends Thread
 		for (int i = 0; i< args.length; i++) {
 			String key = args[i];
 			switch(key) {
+			case "--help":
+				usage();
+				break;
+			case "--version":
+				System.out.println( Config.version() );
+				System.exit(0);
+				break;
 			case "--clisteps":
 				i++;
 				steps = Long.parseLong(args[i]);
