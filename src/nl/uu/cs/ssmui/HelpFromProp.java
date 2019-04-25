@@ -34,7 +34,7 @@ public class HelpFromProp
 	
 	private static Properties getProps( String nm )
 	{
-		URL url = nm.getClass().getResource( "/Help/" + nm + ".prop" ) ;
+		URL url = HelpFromProp.class.getResource( "/Help/" + nm + ".prop" ) ;
 		Properties props = new Properties() ;
 		try
 		{
