@@ -32,7 +32,7 @@ public class Images
 	
 	private static ImageIcon getImage( String nm )
 	{
-		return new ImageIcon( nm.getClass().getResource( "/Images/" + nm + ".gif" ) ) ;
+		return new ImageIcon( Images.class.getResource( "/Images/" + nm + ".gif" ) ) ;
 	}
 	
 	static
